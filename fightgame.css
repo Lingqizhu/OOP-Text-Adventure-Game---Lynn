@@ -1,0 +1,133 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: 'The Nautigal', cursive;
+}
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    background-image:url(https://images.unsplash.com/photo-1484278786775-527ac0d0b608?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHNub3d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+body{
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1{
+    font-family: 'The Nautigal', cursive;
+    color:rgb(253, 185, 197);
+    font-size: 100px;
+}
+.heart {
+
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+  }
+  .heart:after {
+
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+#startbtn{
+    border:none;
+}
+#startbtn:hover{
+    cursor: pointer;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  font-size: 40px;
+  color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://images.unsplash.com/photo-1562932831-afcfe48b5786?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1215&q=80);
+}
+#title{
+  text-align: center;
+  color: rgb(7, 6, 6);
+  font-size: 80px;
+  margin-top: 100px;
+}
+#textarea{
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  margin-top: 150px;
+  background-color: pink;
+}
+.details{
+  position: relative;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap:30px;
+    margin:20px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+
+}
+.btn{
+    background-color: pink;
+    border-color: gold;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    font-size: 40px;
+}
+.btn:hover{
+    border-color: rgb(236, 136, 153) ;
+}
